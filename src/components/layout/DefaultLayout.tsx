@@ -8,9 +8,9 @@ interface Props {
 
 export default function DefaultLayout({ children }: Props): ReactElement {
   return (
-    <div>
+    <div className="h-screen min-h-full">
       <Navigation />
-      <main>{children}</main>
+      <main className="h-full">{children}</main>
     </div>
   )
 }

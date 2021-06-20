@@ -2,7 +2,7 @@ import React from "react"
 
 import { NextPage } from "next"
 
-import "../styles/tailwind.scss"
+import "../styles/global.css"
 import DefaultLayout from "@components/layout/DefaultLayout"
 
 export type NextPageWithLayout = NextPage & {

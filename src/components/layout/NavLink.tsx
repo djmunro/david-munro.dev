@@ -13,12 +13,14 @@ export default function NavLink({ href, children }: Props): ReactElement {
   const isActive = router.asPath === href
 
   return (
-    <li
-      className={`${
-        isActive && "bg-green-500 "
-      } hover:bg-green-500 px-3 py-2 ml-2 rounded text-white font-bold`}
-    >
-      <Link href={href}>{children}</Link>
-    </li>
+    <Link href={href}>
+      <li
+        className={`${
+          isActive && "bg-green-500 "
+        } hover:bg-green-500 px-3 py-2 ml-2 rounded text-white font-bold cursor-pointer`}
+      >
+        {children}
+      </li>
+    </Link>
   )
 }

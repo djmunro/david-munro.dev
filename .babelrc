@@ -1,14 +1,21 @@
 {
-  "presets": ["next/babel"],
+  "presets": [
+    "next/babel"
+  ],
   "plugins": [
     [
       "module-resolver",
       {
-        "root": ["./"],
+        "root": [
+          "./"
+        ],
         "alias": {
-          "@*": ["./src/*"]
+          "@*": [
+            "./src/*"
+          ]
         }
       }
-    ]
+    ],
+    "superjson-next"
   ]
 }
