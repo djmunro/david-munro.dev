@@ -31,7 +31,12 @@
     "unused-imports/no-unused-imports": "error",
     "prettier/prettier": "error",
     "@typescript-eslint/explicit-module-boundary-types": 0,
-    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".ts", ".tsx"]
+      }
+    ],
     "react/jsx-props-no-spreading": 0,
     "jsx-a11y/anchor-is-valid": 0,
     "react/react-in-jsx-scope": 0,
@@ -45,7 +50,13 @@
     "@typescript-eslint/no-var-requires": 0,
     "no-use-before-define": 0,
     "@typescript-eslint/no-use-before-define": 0,
-    "import/extensions": ["error", "never", { "svg": "always" }],
+    "import/extensions": [
+      "error",
+      "never",
+      {
+        "svg": "always"
+      }
+    ],
     "react/no-unescaped-entities": 0,
     "jsx-a11y/label-has-associated-control": 0,
     "react/no-unused-prop-types": 0,
@@ -79,6 +90,8 @@
           "caseInsensitive": true
         }
       }
-    ]
+    ],
+    "no-empty-pattern": 0,
+    "@typescript-eslint/no-empty-interface": 0
   }
 }

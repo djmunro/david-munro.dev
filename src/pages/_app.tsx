@@ -1,13 +1,24 @@
 import React from "react"
 
-import { AppProps } from "next/app"
+import { NextPage } from "next"
 
 import "../styles/tailwind.scss"
-import SiteLayout from "@components/layout/SiteLayout"
+import DefaultLayout from "@components/layout/DefaultLayout"
 
-function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+type GetLayoutFunc = (page: React.ReactElement) => React.ReactElement
+
+export type NextPageWithLayout = NextPage & {
+  getLayout: GetLayoutFunc
+}
+
+type Props = {
+  Component: NextPageWithLayout
+  pageProps: any
+}
+
+function MyApp({ Component, pageProps }: Props): JSX.Element {
   const getLayout =
-    Component.getLayout || ((page) => <SiteLayout>{page}</SiteLayout>)
+    Component.getLayout || ((page) => <DefaultLayout>{page}</DefaultLayout>)
 
   return getLayout(<Component {...pageProps} />)
 }
