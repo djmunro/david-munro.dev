@@ -5,10 +5,8 @@ import { NextPage } from "next"
 import "../styles/tailwind.scss"
 import DefaultLayout from "@components/layout/DefaultLayout"
 
-type GetLayoutFunc = (page: React.ReactElement) => React.ReactElement
-
 export type NextPageWithLayout = NextPage & {
-  getLayout: GetLayoutFunc
+  getLayout: (page: React.ReactElement) => React.ReactElement
 }
 
 type Props = {
