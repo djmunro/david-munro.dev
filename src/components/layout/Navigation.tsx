@@ -1,23 +1,17 @@
 import React, { ReactElement } from "react"
 
-import Link from "next/link"
+import NavLink from "./NavLink"
 
 interface Props {}
 
 export default function Navigation({}: Props): ReactElement {
   return (
-    <header>
+    <header className="bg-green-400">
       <nav>
-        <ul>
-          <li>
-            <Link href="/">Dashboard</Link>
-          </li>
-          <li>
-            <Link href="/projects">Projects</Link>
-          </li>
-          <li>
-            <Link href="/about">About</Link>
-          </li>
+        <ul className="flex flex-row p-4">
+          <NavLink href="/">Dashboard</NavLink>
+          <NavLink href="/projects">Projects</NavLink>
+          <NavLink href="/about">About</NavLink>
         </ul>
       </nav>
     </header>
